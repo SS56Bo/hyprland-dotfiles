@@ -18,7 +18,7 @@ window#waybar {
 .modules-center,
 .modules-right
 {
-    background: rgba(0, 0, 8, .7);
+    background: rgba(0, 0, 0, 0.8);
     margin: 5px 10px;
     padding: 0 5px;
     border-radius: 15px;
@@ -50,6 +50,7 @@ window#waybar {
 #mpd {
     padding: 0 10px;
     border-radius: 15px;
+    color: rgba(30, 144, 255, 0.95);
 }
 
 #clock:hover,
