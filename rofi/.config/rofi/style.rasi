@@ -1,12 +1,61 @@
 * {
-    bg-col:  #1e1e2e;
-    bg-col-light: #1e1e2e;
-    border-col: #1e1e2e;
-    selected-col: #1e1e2e;
-    blue: #89b4fa;
-    fg-col: #cdd6f4;
-    fg-col2: #f38ba8;
-    grey: #6c7086;
-    width: 600;
-    font: "JetBrainsMono Nerd Font 18";
+    bg: #11121D;
+    bg-alt: #444b6a;
+
+    fg: #FFFFFF;
+    fg-alt: #787c99;
+
+    background-color: @bg;
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 45%;
+    background-color: @bg;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    padding: 10;
+    text-color: @fg;
+    children: [ prompt, entry ];
+}
+
+entry {
+    background-color: inherit;
+    padding: 10;
+    text-color: @fg;
+}
+
+element {
+    padding: 10;
+    background-color: @bg;
+    text-color: @fg-alt;
+}
+
+element-selected {
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 30;
+}
+
+listview {
+    background-color: @bg;
+    columns: 1;
+    lines: 8;
+    spacing: 5;
+    scroll: true;
 }
