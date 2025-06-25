@@ -2,10 +2,20 @@
 	"layer": "top", // Waybar at top layer
 	"position": "top", //Waybar position
 	"height": 30,
-	"margin": "0 0 0 0",
-	"modules-left": ["custom/notification", "clock", "custom/pacman", "tray"],
-	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["bluetooth", "cpu", "network", "battery"],
+	"margin-left": 3,
+	"margin-right": 3,
+	"margin-top": 2,
+	"margin-bottom": 0,
+	"modules-left": ["cpu", "memory", "network#speed", "hyprland/workspaces"],
+	"modules-center": ["clock"],
+	"modules-right": ["hyprland/window", "bluetooth", "cpu", "network", "battery"],
 
 	//hyprland workspaces
+
+	//cpu
+	"cpu": {
+		"interval": 1,
+		"format": "{percentage}% <span>\uf538</span>",
+		"on-click": "kitty btop",
+	}
 }
