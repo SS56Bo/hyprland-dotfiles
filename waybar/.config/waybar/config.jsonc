@@ -1,21 +1,27 @@
 {
-	"layer": "top", // Waybar at top layer
-	"position": "top", //Waybar position
-	"height": 30,
-	"margin-left": 3,
-	"margin-right": 3,
-	"margin-top": 2,
-	"margin-bottom": 0,
-	"modules-left": ["cpu", "memory", "network#speed", "hyprland/workspaces"],
-	"modules-center": ["clock"],
-	"modules-right": ["hyprland/window", "bluetooth", "cpu", "network", "battery"],
+  "layer": "top",
+  "position": "top",
+  "spacing": 5,
+  "height": 24,
+  "margin-top": 8,
+  "margin-right": 8,
+  "margin-bottom": 0,
+  "margin-left": 8,
 
-	//hyprland workspaces
+  "modules-left": ["custom/launcher", "hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "bluetooth",
+    "idle_inhibitor",
+    "cpu",
+    "battery",
+    "temperature",
+    "custom/power"
+  ],
 
-	//cpu
-	"cpu": {
-		"interval": 1,
-		"format": "{percentage}% <span>\uf538</span>",
-		"on-click": "kitty btop",
-	}
+  "custom/launcher": {
+    "format": "󰣇",
+    "tooltip": true,
+    "tooltip-format": "btw"
+  }
 }
