@@ -1,61 +1,11 @@
 * {
-    bg: #11121D;
-    bg-alt: #444b6a;
-
-    fg: #FFFFFF;
-    fg-alt: #787c99;
-
-    background-color: @bg;
-
-    border: 0;
-    margin: 0;
-    padding: 0;
-    spacing: 0;
-}
-
-window {
-    width: 45%;
-    background-color: @bg;
-}
-
-inputbar {
-    background-color: @bg-alt;
-    padding: 10;
-    text-color: @fg;
-    children: [ prompt, entry ];
-}
-
-entry {
-    background-color: inherit;
-    padding: 10;
-    text-color: @fg;
-}
-
-element {
-    padding: 10;
-    background-color: @bg;
-    text-color: @fg-alt;
-}
-
-element-selected {
-    background-color: @bg-alt;
-    text-color: @fg;
-}
-
-element-text {
-    background-color: inherit;
-    text-color: inherit;
-    vertical-align: 0.5;
-}
-
-element-icon {
-    size: 30;
-}
-
-listview {
-    background-color: @bg;
-    columns: 1;
-    lines: 8;
-    spacing: 5;
-    scroll: true;
+    bg-col:  #1E1D2F;
+    bg-col-light: #1E1D2F;
+    border-col: #1E1D2F;
+    selected-col: #1E1D2F;
+    blue: #7aa2f7;
+    fg-col: #D9E0EE;
+    fg-col2: #F28FAD;
+    grey: #D9E0EE;
+    width: 600;
 }
