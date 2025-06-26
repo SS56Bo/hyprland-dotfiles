@@ -12,7 +12,7 @@
   "modules-center": ["clock"],
   "modules-right": [
     "bluetooth",
-    "idle_inhibitor",
+    "pulseaudio",
     "cpu",
     "battery",
     "temperature",
@@ -23,5 +23,33 @@
     "format": "󰣇",
     "tooltip": true,
     "tooltip-format": "btw"
+  },
+
+  "custom/power": {
+    "format": " ",
+    "on-click": "bash ~/.config/rofi/leave/leave.sh"
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "clock": {
+    "format": "{: %I:%M %p   %d/%m/%Y}"
+  },
+
+  "cpu": {
+    "interval": 15,
+    "format": " {}%",
+    "max-length": 10
   }
 }
