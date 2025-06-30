@@ -1,16 +1,17 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 10,
-  "margin-top": 0,
-  "margin-bottom": 0,
+  // "height": 10,
+  // "margin-top": 0,
+  // "margin-bottom": 0,
 
-  "modules-left": ["custom/launcher", "hyprland/workspaces"],
-  "modules-center": ["clock"],
+  "reload_style_on_change": true,
+  "modules-left": ["custom/launcher", "clock"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": [
-    "tray",
     "bluetooth",
     "pulseaudio",
+    "network",
     "battery",
     "custom/power"
   ],
@@ -53,20 +54,37 @@
   },
 
   "network": {
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ifname} ",
-    "format-disconnected": "",
-    "max-length": 50,
-    "on-click": "kitty -e 'nmtui'"
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "",
+    "tooltip-format-disconnected": "Error",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} 🖧 ",
+    "on-click": "kitty nmtui"
   },
 
-  "memory": {
-    "interval": 10,
-    "format": " {used}MB/{total}MB"
+  "bluetooth": {
+    "format-on": "󰂯",
+    "format-off": "BT-off",
+    "format-disabled": "󰂲",
+    "format-connected-battery": "{device_battery_percentage}% 󰂯",
+    "format-alt": "{device_alias} 󰂯",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+    "on-click-right": "blueman-manager"
   },
 
   "hyprland/workspaces": {
-    "on-click": "activate",
-    "sort-by-name": true
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "empty": ""
+    },
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5]
+    }
   }
 }
