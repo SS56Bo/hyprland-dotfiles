@@ -1,29 +1,28 @@
 {
   "layer": "top",
   "position": "top",
-  "height":10,
+  "height": 10,
   "margin-top": 0,
   "margin-bottom": 0,
 
-  "modules-left": ["custom/launcher", "cpu", "memory", "network", "mpd"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-left": ["custom/launcher", "hyprland/workspaces"],
+  "modules-center": ["clock"],
   "modules-right": [
     "tray",
     "bluetooth",
     "pulseaudio",
     "battery",
-    "clock",
     "custom/power"
   ],
 
   "custom/launcher": {
     "format": "󰣇",
     "tooltip": true,
-    "tooltip-format": "Soham's Arch btw"
+    "tooltip-format": "Soham's Arch"
   },
 
   "custom/power": {
-    "format": " ",
+    "format": " ",
     "on-click": "bash ~/.config/rofi/leave/leave.sh"
   },
 
@@ -43,7 +42,8 @@
   "clock": {
     "format-alt": "{:%H:%M}",
     "format": "{:%d %B %Y - %I:%M %p}",
-    "on-click": "gnome-calender"
+    "on-click": "gnome-calendar",
+    "interval": 60
   },
 
   "cpu": {
@@ -60,10 +60,13 @@
     "on-click": "kitty -e 'nmtui'"
   },
 
-  "hyprland/workspaces": {
-	  "on-click": "activate",
-	  "sort-by-name": true
-	}
+  "memory": {
+    "interval": 10,
+    "format": " {used}MB/{total}MB"
+  },
 
-   
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "sort-by-name": true
+  }
 }
