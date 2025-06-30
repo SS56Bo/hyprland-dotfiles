@@ -1,28 +1,25 @@
 {
   "layer": "top",
   "position": "top",
-  "spacing": 5,
-  "height": 24,
-  "margin-top": 8,
-  "margin-right": 8,
+  "height":10,
+  "margin-top": 0,
   "margin-bottom": 0,
-  "margin-left": 8,
 
-  "modules-left": ["custom/launcher", "hyprland/workspaces"],
-  "modules-center": ["clock"],
+  "modules-left": ["custom/launcher", "cpu", "memory", "network", "mpd"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": [
+    "tray",
     "bluetooth",
-    "network",
     "pulseaudio",
-    "cpu",
     "battery",
+    "clock",
     "custom/power"
   ],
 
   "custom/launcher": {
     "format": "󰣇",
     "tooltip": true,
-    "tooltip-format": "btw"
+    "tooltip-format": "Soham's Arch btw"
   },
 
   "custom/power": {
@@ -44,14 +41,15 @@
   },
 
   "clock": {
-    "format": "{: %I:%M %p   %d/%m/%Y}",
+    "format-alt": "{:%H:%M}",
+    "format": "{:%d %B %Y - %I:%M %p}",
     "on-click": "gnome-calender"
   },
 
   "cpu": {
     "interval": 15,
-    "format": " {}%",
-    "max-length": 10
+    "format": "  {}%",
+    "on-click": "alacritty -e 'htop'"
   },
 
   "network": {
@@ -60,5 +58,12 @@
     "format-disconnected": "",
     "max-length": 50,
     "on-click": "kitty -e 'nmtui'"
-  }
+  },
+
+  "hyprland/workspaces": {
+	  "on-click": "activate",
+	  "sort-by-name": true
+	}
+
+   
 }
