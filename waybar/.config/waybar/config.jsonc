@@ -1,90 +1,58 @@
 {
-  "layer": "top",
-  "position": "top",
-  // "height": 10,
-  // "margin-top": 0,
-  // "margin-bottom": 0,
-
-  "reload_style_on_change": true,
-  "modules-left": ["custom/launcher", "hyprland/workspaces"],
+  "margin-top": 6,
+  "margin-left": 10,
+  "margin-right": 10,
+  "height": 32,
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "cpu", "memory"],
   "modules-center": ["clock"],
-  "modules-right": [
-    "bluetooth",
-    "pulseaudio",
-    "network",
-    "battery",
-    "custom/power"
-  ],
+  "modules-right": ["bluetooth", "pulseaudio", "network", "custom/power"],
 
+  // Custom -- Arch
   "custom/launcher": {
     "format": "󰣇",
     "tooltip": true,
-    "tooltip-format": "Soham's Arch"
+    "tooltip-format": "Soham's Arch",
+    "on-click": "alacritty -e neofetch"
   },
 
+  // Custom - Power [Might be changed to wlogout]
   "custom/power": {
     "format": " ",
     "on-click": "bash ~/.config/rofi/leave/leave.sh"
   },
 
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon}  {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""]
-  },
-
-  "clock": {
-    "format-alt": "{:%H:%M}",
-    "format": "{:%d %B %Y - %I:%M %p}",
-    "on-click": "gnome-calendar",
-    "interval": 60
-  },
-
+  // CPU
   "cpu": {
-    "interval": 15,
-    "format": "  {}%",
-    "on-click": "alacritty -e 'htop'"
+    "format": " {usage}%"
   },
 
-  "network": {
-    "format-wifi": "",
-    "format-ethernet": "",
-    "format-disconnected": "",
-    "tooltip-format-disconnected": "Error",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ifname} 🖧 ",
-    "on-click": "kitty nmtui"
+  // Memory
+  "memory": {
+    "format": " {used}MB"
   },
 
-  "bluetooth": {
-    "format-on": "󰂯",
-    "format-off": "BT-off",
-    "format-disabled": "󰂲",
-    "format-connected-battery": "{device_battery_percentage}% 󰂯",
-    "format-alt": "{device_alias} 󰂯",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
-    "on-click-right": "blueman-manager"
+  // Clock
+  "clock": {
+    "format": " {:%H:%M}",
+    "tooltip-format": "{:%A, %d %B %Y}\n{:%H:%M:%S}",
+    "on-click": "gnome-calendar",
+    "interval": 1
   },
 
+  // hyprland workspaces
   "hyprland/workspaces": {
     "format": "{icon}",
+    "on-click": "activate",
+    "disable-scroll": false,
     "format-icons": {
-      "active": "",
-      "default": "",
-      "empty": ""
+      "active": "",
+      "default": ""
     },
     "persistent-workspaces": {
-      "*": [1, 2, 3, 4, 5]
-    }
+      "1": [],
+      "2": [],
+      "3": []
+    },
+    "sort-by-number": true
   }
 }

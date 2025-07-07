@@ -1,0 +1,102 @@
+@import "color.css";
+
+* {
+  border: none;
+  font-size: 14px;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0);
+}
+
+#workspaces {
+  background-color: var(--base);
+  padding: 1px 15px;
+  border-radius: 1rem;
+  margin: 0px 10px;
+}
+
+#workspaces button {
+  padding: 3px 5px;
+  color: var(--lavender);
+}
+
+tooltip {
+  background-color: var(--base);
+  color: var(--text);
+}
+
+#custom-launcher,
+#custom-power {
+  background-color: var(--base);
+  border-radius: 1rem;
+  padding: 2px 10px;
+  min-width: 25px;
+}
+
+#custom-launcher {
+  color: var(--cyberpunk);
+}
+
+#cpu,
+#memory {
+  background-color: var(--base);
+  padding: 2px 10px;
+}
+
+#cpu {
+  color: var(--sapphire);
+  border-radius: 1rem 0px 0px 1rem;
+  padding-left: 15px;
+  min-width: 40px;
+}
+
+#memory {
+  color: var(--teal);
+  min-width: 70px;
+}
+
+#clock {
+  background-color: var(--base);
+  border-radius: 1rem;
+  padding: 2px 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#clock {
+  color: var(--text);
+}
+
+#pulseaudio,
+#network,
+#bluetooth {
+  background-color: var(--base);
+  padding: 2px 10px;
+}
+
+#pulseaudio {
+  color: var(--sapphire);
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 10px;
+  padding-right: 15px;
+}
+
+#network {
+  color: var(--green);
+  border-radius: 1rem 0px 0px 1rem;
+  padding-left: 15px;
+}
+
+#custom-power {
+  color: var(--red);
+}
+
+#custom-launcher:hover,
+#cpu:hover,
+#memory:hover,
+#clock:hover,
+#network:hover,
+#custom-power:hover {
+  background-color: var(--crust);
+}
