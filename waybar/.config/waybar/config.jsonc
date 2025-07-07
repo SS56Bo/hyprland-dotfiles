@@ -6,8 +6,8 @@
   // "margin-bottom": 0,
 
   "reload_style_on_change": true,
-  "modules-left": ["custom/launcher", "clock"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-left": ["custom/launcher", "hyprland/workspaces"],
+  "modules-center": ["clock"],
   "modules-right": [
     "bluetooth",
     "pulseaudio",
