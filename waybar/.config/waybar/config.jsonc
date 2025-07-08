@@ -1,14 +1,14 @@
 {
   "position": "top",
   "layer": "top",
-  "margin-top": 5,
+  "margin-top": 0,
   "margin-bottom": 0,
-  "margin-left": 5,
-  "margin-right": 5,
+  "margin-left": 0,
+  "margin-right": 0,
   "spacing": 1,
   "reload_style_on_change": true,
 
-  "modules-left": ["custom/group-left"],
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "backlight"],
   "modules-center": ["clock"],
   "modules-right": [
     "pulseaudio",
@@ -19,7 +19,7 @@
   ],
 
   // Group 1 - Contains Custom/launcher, hyprland workspaces, backlight
-  "custom/group-left": {
+  
     // Custom -- Arch
     "custom/launcher": {
       "format": "󰣇",
@@ -47,8 +47,8 @@
     "backlight": {
       "format": "{percent}% {icon}",
       "format-icons": ["", ""]
-    }
-  },
+    },
+
 
   // "custom/group-right": {},   TO BE USED LATER
 
