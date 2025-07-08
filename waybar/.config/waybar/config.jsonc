@@ -1,60 +1,74 @@
 {
-  "margin-top": 6,
-  "margin-left": 10,
-  "margin-right": 10,
-  "height": 32,
-  "modules-left": ["custom/launcher", "hyprland/workspaces", "cpu", "battery"],
-  "modules-center": ["clock"],
-  "modules-right": ["bluetooth", "pulseaudio", "network", "custom/power"],
+  "position": "top",
+  "layer": "top",
+  "height": 16,
+  "margin-top": 0,
+  "margin-bottom": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "battery"],
+  "modules-center": ["memory", "cpu", "backlight"],
+  "modules-right": ["tray", "bluetooth", "pulseaudio", "network", "clock"],
 
   // Custom -- Arch
   "custom/launcher": {
     "format": "󰣇",
     "tooltip": true,
     "tooltip-format": "Soham's Arch",
-    "on-click": "alacritty -e neofetch"
-  },
-
-  // Custom - Power [Might be changed to wlogout]
-  "custom/power": {
-    "format": " ",
     "on-click": "bash ~/.config/rofi/leave/leave.sh"
   },
 
+  // // Custom - Power [Might be changed to wlogout]
+  // "custom/power": {
+  //   "format": " ",
+  //   "on-click": "bash ~/.config/rofi/leave/leave.sh"
+  // },
+
   // CPU
   "cpu": {
-    "format": " {usage}%"
+    "format": "󰻠 {usage}%",
+    "format-alt": "󰻠 {avg_frequency} GHz",
+    "interval": 5
   },
-
   // Battery
   "battery": {
-    "format": "  {capacity}%",
-    "tooltip": true,
-    "tooltip-format": "Battery: {capacity}%\nStatus: {status}"
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{icon} {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""]
   },
 
   // Clock
   "clock": {
     "format": " {:%H:%M}",
-    "tooltip-format": "{:%A, %d %B %Y}\n{:%H:%M:%S}",
-    "on-click": "gnome-calendar",
-    "interval": 1
+    "tooltip": "true",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": " {:%d/%m}",
+    "interval": 5
   },
 
   // hyprland workspaces
   "hyprland/workspaces": {
+    "active-only": false,
+    "all-outputs": true,
+    "disable-scroll": false,
+    "on-scroll-up": "hyprctl dispatch workspace -1",
+    "on-scroll-down": "hyprctl dispatch workspace +1",
     "format": "{icon}",
     "on-click": "activate",
-    "disable-scroll": false,
     "format-icons": {
+      "urgent": "",
       "active": "",
-      "default": ""
-    },
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": []
-    },
-    "sort-by-number": true
+      "default": "󰧞",
+      "sort-by-number": true
+    }
   }
 }
