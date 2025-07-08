@@ -3,7 +3,7 @@
   "margin-left": 10,
   "margin-right": 10,
   "height": 32,
-  "modules-left": ["custom/launcher", "hyprland/workspaces", "cpu", "memory"],
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "cpu", "battery"],
   "modules-center": ["clock"],
   "modules-right": ["bluetooth", "pulseaudio", "network", "custom/power"],
 
@@ -27,9 +27,7 @@
   },
 
   // Memory
-  "memory": {
-    "format": " {used}MB"
-  },
+  
 
   // Clock
   "clock": {
