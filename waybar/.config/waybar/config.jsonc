@@ -5,14 +5,15 @@
   "margin-bottom": 0,
   "margin-left": 0,
   "margin-right": 0,
-  "modules-left": ["custom/launcher", "hyprland/workspaces" ,"battery"],
-  "modules-center": ["custom/info"],
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "backlight"],
+  "modules-center": ["clock"],
   "modules-right": [
     "pulseaudio",
     "bluetooth",
     "network",
-    "custom/power",
-    "clock"
+    "backlight",
+    "battery",
+    "custom/power"
   ],
 
   // Custom -- Arch
@@ -32,7 +33,7 @@
   // Apps
   "custom/app": {
     "format": "Apps",
-    "on-click": "rofi -show run"
+    "on-click": "rofi -show drun"
   },
 
   // Battery
