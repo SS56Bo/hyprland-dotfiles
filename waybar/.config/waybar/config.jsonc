@@ -26,8 +26,12 @@
     "format": " {usage}%"
   },
 
-  // Memory
-  
+  // Battery
+  "battery": {
+    "format": "  {capacity}%",
+    "tooltip": true,
+    "tooltip-format": "Battery: {capacity}%\nStatus: {status}"
+  },
 
   // Clock
   "clock": {
