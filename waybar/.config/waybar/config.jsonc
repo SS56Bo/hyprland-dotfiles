@@ -1,27 +1,75 @@
 {
   "position": "top",
   "layer": "top",
-  "margin-top": 0,
+  "margin-top": 5,
   "margin-bottom": 0,
-  "margin-left": 0,
-  "margin-right": 0,
-  "modules-left": ["custom/launcher", "hyprland/workspaces", "backlight"],
+  "margin-left": 5,
+  "margin-right": 5,
+  "spacing": 1,
+  "reload_style_on_change": true,
+
+  "modules-left": ["custom/group-left"],
   "modules-center": ["clock"],
   "modules-right": [
     "pulseaudio",
     "bluetooth",
     "network",
-    "backlight",
     "battery",
     "custom/power"
   ],
 
-  // Custom -- Arch
-  "custom/launcher": {
-    "format": "󰣇",
-    "tooltip": true,
-    "tooltip-format": "Soham's Arch"
-    // "on-click": "bash ~/.config/rofi/leave/leave.sh"
+  // Group 1 - Contains Custom/launcher, hyprland workspaces, backlight
+  "custom/group-left": {
+    // Custom -- Arch
+    "custom/launcher": {
+      "format": "󰣇",
+      "tooltip": true,
+      "tooltip-format": "Soham's Arch"
+    },
+
+    // hyprland workspaces
+    "hyprland/workspaces": {
+      "active-only": false,
+      "all-outputs": true,
+      "disable-scroll": false,
+      "on-scroll-up": "hyprctl dispatch workspace -1",
+      "on-scroll-down": "hyprctl dispatch workspace +1",
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+        "urgent": "",
+        "active": "",
+        "default": "󰧞",
+        "sort-by-number": true
+      }
+    },
+
+    "backlight": {
+      "format": "{percent}% {icon}",
+      "format-icons": ["", ""]
+    }
+  },
+
+  // "custom/group-right": {},   TO BE USED LATER
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
   },
 
   // // Custom - Power [Might be changed to wlogout]
@@ -56,22 +104,5 @@
     "tooltip": "true",
     "on-click": "gnome-calendar",
     "interval": 5
-  },
-
-  // hyprland workspaces
-  "hyprland/workspaces": {
-    "active-only": false,
-    "all-outputs": true,
-    "disable-scroll": false,
-    "on-scroll-up": "hyprctl dispatch workspace -1",
-    "on-scroll-down": "hyprctl dispatch workspace +1",
-    "format": "{icon}",
-    "on-click": "activate",
-    "format-icons": {
-      "urgent": "",
-      "active": "",
-      "default": "󰧞",
-      "sort-by-number": true
-    }
   }
 }

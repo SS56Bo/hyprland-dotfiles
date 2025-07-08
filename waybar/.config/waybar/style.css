@@ -1,47 +1,50 @@
 * {
   font-family: JetBrainsMono Nerd Font, monospace;
   font-size: 14px;
-  color: #f4cdcd;
+  color: #cdd6f4;
   border: none;
   box-shadow: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* General bar background */
 window#waybar {
-  border: none;
+  background: #1e1e2e;
   color: #ffffff;
+  border: none;
+  margin: 0;
 }
 
-/* Capsule Style for Modules */
-#workspaces,
+/* === GROUP STYLING === */
+#custom-group-left,
 #clock,
-#battery,
-#network,
 #pulseaudio,
+#bluetooth,
+#network,
+#battery,
+#custom-power,
+#backlight,
 #custom-launcher,
-#custom-powermenu,
-#backlight {
-  background: rgba(0, 0, 0, 0.2);
-  border: 2px solid #f4cdcd;
+#workspaces {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid #89b4fa;
   border-radius: 16px;
   padding: 4px 10px;
-  margin: 2px 6px;
+  margin: 4px 6px;
 }
 
-/* Center Clock */
+/* === CLOCK === */
 #clock {
   font-weight: bold;
-  background-color: transparent;
-  border: 2px solid #89b4fa;
-  padding: 4px 12px;
+  border-color: #94e2d5;
 }
 
-/* Workspaces (with active window indicator) */
+/* === WORKSPACES === */
 #workspaces button {
   padding: 0 8px;
+  background: transparent;
   color: #cdd6f4;
   border-radius: 16px;
-  background: transparent;
   transition: background 0.3s ease;
 }
 
@@ -50,13 +53,60 @@ window#waybar {
   color: #1e1e2e;
 }
 
+#workspaces button.urgent {
+  background: #f38ba8;
+  color: #1e1e2e;
+}
+
 #workspaces button:hover {
   background: #585b70;
 }
 
-/* Optional: Remove module separators */
-.modules-left > widget:not(:last-child),
-.modules-center > widget:not(:last-child),
-.modules-right > widget:not(:last-child) {
-  margin-right: 6px;
+/* === LAUNCHER === */
+#custom-launcher {
+  font-size: 16px;
+  color: #89b4fa;
 }
+
+/* === BACKLIGHT === */
+#backlight {
+  color: #f9e2af;
+}
+
+/* === AUDIO === */
+#pulseaudio {
+  color: #fab387;
+}
+
+/* === BLUETOOTH === */
+#bluetooth {
+  color: #b4befe;
+}
+
+/* === NETWORK === */
+#network {
+  color: #94e2d5;
+}
+
+/* === BATTERY === */
+#battery {
+  color: #a6e3a1;
+}
+
+/* === POWER MENU === */
+#custom-power {
+  color: #f38ba8;
+}
+
+/* Optional: center clock styling override */
+.modules-center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional glow (commented out) */
+/*
+#clock, #custom-launcher, #workspaces, #pulseaudio, #bluetooth, #network, #battery, #custom-power, #backlight {
+  box-shadow: 0 0 6px #89b4fa;
+}
+*/
