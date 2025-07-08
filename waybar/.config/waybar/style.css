@@ -2,7 +2,7 @@
   border: none;
   border-radius: 12px;
   font-family: "Iosevka Nerd Font", FontAwesome, "Noto Sans CJK";
-  font-size: 10px;
+ font-size: 8px;
   font-style: normal;
   min-height: 0;
   transition: all 0.3s ease;
@@ -39,7 +39,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  background: #00f9ff33;
+  background: #00f9ff;
   color: #ffffff;
 }
 
@@ -100,7 +100,7 @@ window#waybar {
 }
 
 #custom-launcher:hover {
-  background-color: #ff79c622;
+  background-color: #ff79c6;
   color: #ffffff;
 }
 
