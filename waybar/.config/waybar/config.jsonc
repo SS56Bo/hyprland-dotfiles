@@ -1,35 +1,40 @@
 {
   "position": "top",
   "layer": "top",
-  "height": 16,
   "margin-top": 0,
   "margin-bottom": 0,
-  "margin-left": 0,
-  "margin-right": 0,
-  "modules-left": ["custom/launcher", "hyprland/workspaces", "battery"],
-  "modules-center": ["memory", "cpu", "backlight"],
-  "modules-right": ["tray", "bluetooth", "pulseaudio", "network", "clock"],
+  "margin-left": 5,
+  "margin-right": 5,
+  "modules-left": ["custom/launcher", "battery", "custom/app"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "pulseaudio",
+    "bluetooth",
+    "network",
+    "custom/power",
+    "clock"
+  ],
 
   // Custom -- Arch
   "custom/launcher": {
     "format": "󰣇",
     "tooltip": true,
-    "tooltip-format": "Soham's Arch",
-    "on-click": "bash ~/.config/rofi/leave/leave.sh"
+    "tooltip-format": "Soham's Arch"
+    // "on-click": "bash ~/.config/rofi/leave/leave.sh"
   },
 
   // // Custom - Power [Might be changed to wlogout]
-  // "custom/power": {
-  //   "format": " ",
-  //   "on-click": "bash ~/.config/rofi/leave/leave.sh"
-  // },
-
-  // CPU
-  "cpu": {
-    "format": "󰻠 {usage}%",
-    "format-alt": "󰻠 {avg_frequency} GHz",
-    "interval": 5
+  "custom/power": {
+    "format": " ",
+    "on-click": "bash ~/.config/rofi/leave/leave.sh"
   },
+
+  // Apps
+  "custom/app": {
+    "format": "Apps",
+    "on-click": "rofi -show run"
+  },
+
   // Battery
   "battery": {
     "states": {
@@ -41,17 +46,14 @@
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
     "format-alt": "{icon} {time}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
     "format-icons": ["", "", "", "", ""]
   },
 
   // Clock
   "clock": {
-    "format": " {:%H:%M}",
+    "format": "{:%H:%M}",
     "tooltip": "true",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": " {:%d/%m}",
+    "on-click": "gnome-calendar",
     "interval": 5
   },
 

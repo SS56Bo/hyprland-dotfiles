@@ -1,9 +1,9 @@
 * {
   border: none;
-  border-radius: 0px;
+  border-radius: 12px;
   /*font-family: VictorMono, Iosevka Nerd Font, Noto Sans CJK;*/
   font-family: Iosevka, FontAwesome, Noto Sans CJK;
-  font-size: 14px;
+  font-size: 10px;
   font-style: normal;
   min-height: 0;
 }
