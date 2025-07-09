@@ -19,38 +19,35 @@
   ],
 
   // Group 1 - Contains Custom/launcher, hyprland workspaces, backlight
-  
-    // Custom -- Arch
-    "custom/launcher": {
-      "format": "󰣇",
-      "tooltip": true,
-      "tooltip-format": "Soham's Arch"
-    },
 
-    // hyprland workspaces
-    "hyprland/workspaces": {
-      "active-only": false,
-      "all-outputs": true,
-      "disable-scroll": false,
-      "on-scroll-up": "hyprctl dispatch workspace -1",
-      "on-scroll-down": "hyprctl dispatch workspace +1",
-      "format": "{icon}",
-      "on-click": "activate",
-      "format-icons": {
-        "urgent": "",
-        "active": "",
-        "default": "󰧞",
-        "sort-by-number": true
-      }
-    },
+  // Custom -- Arch
+  "custom/launcher": {
+    "format": "󰣇",
+    "tooltip": true,
+    "tooltip-format": "Soham's Arch"
+  },
 
-    "backlight": {
-      "format": "{percent}% {icon}",
-      "format-icons": ["", ""]
-    },
+  // hyprland workspaces
+  "hyprland/workspaces": {
+    "active-only": false,
+    "all-outputs": true,
+    "disable-scroll": false,
+    "on-scroll-up": "hyprctl dispatch workspace -1",
+    "on-scroll-down": "hyprctl dispatch workspace +1",
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": "󰧞",
+      "sort-by-number": true
+    }
+  },
 
-
-  // "custom/group-right": {},   TO BE USED LATER
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""]
+  },
 
   "pulseaudio": {
     "format": "{volume}% {icon}",
@@ -78,12 +75,6 @@
     "on-click": "bash ~/.config/rofi/leave/leave.sh"
   },
 
-  // Apps
-  "custom/app": {
-    "format": "Apps",
-    "on-click": "rofi -show drun"
-  },
-
   // Battery
   "battery": {
     "states": {
@@ -102,7 +93,8 @@
   "clock": {
     "format": "{:%H:%M}",
     "tooltip": "true",
+    "tooltip-format": "{:%Y-%m-%d - %H:%M}",
     "on-click": "gnome-calendar",
-    "interval": 5
+    "interval": 60
   }
 }

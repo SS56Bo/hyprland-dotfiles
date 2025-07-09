@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   color: #ffffff;
   border: none;
   margin: 0;
@@ -25,7 +25,7 @@ window#waybar {
 #backlight,
 #custom-launcher,
 #workspaces {
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0);
   margin: 4px 6px;
   border: 1px solid;
   border-radius: 15px;
@@ -72,6 +72,12 @@ window#waybar {
   padding-top: 2px;
   padding-bottom: 2px;
   color: #ff073a;
+  transition: background-color 0.2s ease;
+}
+
+#custom-launcher:hover {
+  background-color: #ff073a;
+  color: #000000;
 }
 
 /* === BACKLIGHT === */
@@ -81,8 +87,8 @@ window#waybar {
 }
 
 #backlight:hover {
-    background-color: #f9e2af;
-    color: #000000;
+  background-color: #f9e2af;
+  color: #000000;
 }
 
 /* === AUDIO === */
@@ -92,23 +98,41 @@ window#waybar {
 }
 
 #pulseaudio:hover {
-    background-color: #fab387;
-    color: #000000;
+  background-color: #fab387;
+  color: #000000;
 }
 
 /* === BLUETOOTH === */
 #bluetooth {
   color: #b4befe;
+  transition: background-color 0.2s ease;
+}
+
+#bluetooth:hover {
+  background-color: #b4befe;
+  color: #000000;
 }
 
 /* === NETWORK === */
 #network {
   color: #94e2d5;
+  transition: background-color 0.2s ease;
+}
+
+#network:hover {
+  background-color: #94e2d5;
+  color: #000000;
 }
 
 /* === BATTERY === */
 #battery {
   color: #a6e3a1;
+  transition: background-color 0.2s ease;
+}
+
+#battery:hover {
+  background-color: #a6e3a1;
+  color: #000000;
 }
 
 /* === POWER MENU === */
@@ -118,4 +142,10 @@ window#waybar {
   padding-right: 8px;
   padding-left: 12px;
   padding-bottom: 2px;
+  transition: background-color 0.2s ease;
+}
+
+#custom-power:hover {
+  background-color: #ff073a;
+  color: #000000;
 }
