@@ -18,8 +18,8 @@ window#waybar {
 /* === GROUP STYLING === */
 #clock,
 #pulseaudio,
-#bluetooth,
-#network,
+#custom-bluetooth,
+#custom-wifi,
 #battery,
 #custom-power,
 #backlight,
@@ -108,23 +108,23 @@ window#waybar {
 }
 
 /* === BLUETOOTH === */
-#bluetooth {
+#custom-bluetooth {
   color: #b4befe;
   transition: background-color 0.2s ease;
 }
 
-#bluetooth:hover {
+#custom-bluetooth:hover {
   background-color: #b4befe;
   color: #000000;
 }
 
 /* === NETWORK === */
-#network {
+#custom-wifi {
   color: #94e2d5;
   transition: background-color 0.2s ease;
 }
 
-#network:hover {
+#custom-wifi:hover {
   background-color: #94e2d5;
   color: #000000;
 }
