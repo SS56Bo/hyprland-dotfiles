@@ -35,4 +35,8 @@ format = 'via [$symbol ($version )] ($style)'
 [rust]
 style='bold red'
 symbol = '󱘗'
-format = 'via [$symbol ($version)] ($style)'
+format = "via [{{symbol}} {{version}}] ({{style}})"
+
+[java]
+symbol = " "
+format = "via [${symbol} ${version}](red)"
