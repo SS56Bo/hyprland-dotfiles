@@ -96,5 +96,12 @@
     "tooltip-format": "{:%Y-%m-%d - %H:%M}",
     "on-click": "gnome-calendar",
     "interval": 60
-  }
+  },
+  
+  // Network
+  "network": {
+        "interface": "auto",
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "format-disconnected": "Dsiconnected"
+    }
 }
