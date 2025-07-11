@@ -4,10 +4,35 @@ $git_branch\
 $git_status\
 $fill\
 $lua\
+$c\
+$cpp\
+$java\
+$rust\
+$go\
 $python\
 $nodejs\
 line_break\
 $character"""
 
 [fill]
-symbol = '-'
+symbol = ' '
+
+[lua]
+style='bold blue'
+symbol = ''
+format = 'via [$symbol ($version )]($style)'
+
+[cpp]
+style='sky blue'
+symbol = ''
+format = 'via [$symbol ($version )] ($style)'
+
+[c]
+style='light teal'
+symbol = ''
+format = 'via [$symbol ($version )] ($style)'
+
+[rust]
+style='bold red'
+symbol = '󱘗'
+format = 'via [$symbol ($version)] ($style)'
