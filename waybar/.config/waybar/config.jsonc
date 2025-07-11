@@ -12,8 +12,8 @@
   "modules-center": ["clock"],
   "modules-right": [
     "pulseaudio",
-    "bluetooth",
-    "network",
+    "custom/bluetooth",
+    "custom/wifi",
     "battery",
     "custom/power"
   ],
@@ -97,11 +97,20 @@
     "on-click": "gnome-calendar",
     "interval": 60
   },
-  
+
   // Network
-  "network": {
-        "interface": "auto",
-        "format-wifi": "{essid} ({signalStrength}%)",
-        "format-disconnected": "Dsiconnected"
-    }
+  "custom/wifi": {
+    "exec": "~/.config/waybar/scripts/wifi.sh",
+    "interval": 5,
+    "return-type": "json"
+  },
+
+  // BLUETOOTH
+  "custom/bluetooth": {
+    "exec": "~/.config/waybar/scripts/bluetooth.sh",
+    "interval": 5,
+    "return-type": "json",
+    "on-click": "bluetoothctl",
+    "tooltip": true
+  }
 }
