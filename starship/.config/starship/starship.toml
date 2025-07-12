@@ -25,18 +25,26 @@ format = 'via [$symbol ($version )]($style)'
 [cpp]
 style='sky blue'
 symbol = ''
-format = 'via [$symbol ($version )] ($style)'
+format = 'via [$symbol ($version )]($style)'
 
 [c]
 style='light teal'
 symbol = ''
-format = 'via [$symbol ($version )] ($style)'
+format = 'via [$symbol ($version )]($style)'
 
 [rust]
 style='bold red'
 symbol = '󱘗'
-format = "via [{{symbol}} {{version}}] ({{style}})"
+[rust]
+symbol = "󱘗"
+style = "bold red"
+format = 'via [$symbol ($version)]($style)'
 
 [java]
 symbol = " "
 format = "via [${symbol} ${version}](red)"
+
+[python]
+symbol = ""
+style = "bold yellow"
+format = 'via [$symbol ($version)]($style)'
