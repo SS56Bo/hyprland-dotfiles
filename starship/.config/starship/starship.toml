@@ -33,9 +33,6 @@ symbol = ''
 format = 'via [$symbol ($version )]($style)'
 
 [rust]
-style='bold red'
-symbol = '󱘗'
-[rust]
 symbol = "󱘗"
 style = "bold red"
 format = 'via [$symbol ($version)]($style)'

@@ -72,7 +72,7 @@
   // // Custom - Power [Might be changed to wlogout]
   "custom/power": {
     "format": " ",
-    "on-click": "bash ~/.config/rofi/leave/leave.sh"
+    "on-click": "wlogout"
   },
 
   // Battery
