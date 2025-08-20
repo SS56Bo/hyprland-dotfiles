@@ -13,7 +13,7 @@
     "pulseaudio",
     "backlight",
     "battery",
-    "cutom/power"
+    "custom/power"
   ],
 
   "hyprland/workspaces": {
