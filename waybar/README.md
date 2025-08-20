@@ -1,3 +1,0 @@
-Waybar config
-
-Color pallete
