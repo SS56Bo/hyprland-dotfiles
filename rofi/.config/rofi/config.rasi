@@ -1,4 +1,4 @@
-configuration{
+configuration {
     modi: "run,drun";
     lines: 6;
     font: "JetBrainsMono Nerd Font 14";
@@ -11,94 +11,106 @@ configuration{
     hide-scrollbar: true;
     display-drun: "   Apps ";
     display-run: "   Run ";
-    display-window: " 﩯  window";
+    display-window: " 﩯  Window";
     display-Network: " 󰤨  Network";
     sidebar-mode: true;
 }
 
-@theme "style"
+* {
+    bg-col:    #2E3440;  /* Nord0 */
+    bg-col-light: #3B4252; /* Nord1 */
+    border-col: #4C566A;  /* Nord2 */
+    selected-col: #5E81AC; /* Nord10 */
+    fg-col:    #ECEFF4;  /* Nord6 */
+    fg-col2:   #D8DEE9;  /* Nord4 */
+    grey:      #81A1C1;  /* Nord9 */
+    blue:      #88C0D0;  /* Nord8 */
+}
 
-element-text, element-icon , mode-switcher {
+element-text, element-icon, mode-switcher {
     background-color: inherit;
-    text-color:       inherit;
+    text-color: inherit;
 }
 
 window {
-    height: 360px;
-    border: 3px;
+    height: 400px;
+    border: 2px;
     border-color: @border-col;
+    border-radius: 8px;
     background-color: @bg-col;
+    padding: 20px;
 }
 
 mainbox {
     background-color: @bg-col;
+    spacing: 10px;
 }
 
 inputbar {
-    children: [prompt,entry];
-    background-color: @bg-col;
+    children: [prompt, entry];
+    background-color: @bg-col-light;
     border-radius: 6px;
-    padding: 2px;
+    padding: 10px;
+    margin: 0px 20px 10px 20px;
 }
 
 prompt {
     background-color: @blue;
-    padding: 6px;
+    padding: 6px 12px;
     text-color: @bg-col;
-    border-radius: 3px;
-    margin: 20px 0px 0px 20px;
-}
-
-textbox-prompt-colon {
-    expand: false;
-    str: ":";
+    border-radius: 6px;
+    margin: 0px 10px 0px 0px;
 }
 
 entry {
     padding: 6px;
-    margin: 20px 0px 0px 10px;
     text-color: @fg-col;
     background-color: @bg-col;
-    placeholder:"Search";
-
+    placeholder: "Search";
+    border-radius: 4px;
 }
 
 listview {
-    border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
+    border: 0px;
+    padding: 10px 20px;
+    margin: 10px 0px;
     columns: 2;
     background-color: @bg-col;
 }
 
 element {
-    padding: 5px;
+    padding: 8px;
+    border-radius: 6px;
     background-color: @bg-col;
-    text-color: @fg-col  ;
+    text-color: @fg-col;
 }
 
 element-icon {
-    size: 25px;
+    size: 32px;
+    horizontal-align: 0.5;
 }
 
 element selected {
-    background-color:  @selected-col ;
-    text-color: @fg-col2  ;
+    background-color: @selected-col;
+    text-color: @fg-col2;
+    border-radius: 6px;
+    padding: 8px;
 }
 
 mode-switcher {
-    spacing: 0;
-  }
+    spacing: 6px;
+}
 
 button {
-    padding: 10px;
+    padding: 8px 12px;
     background-color: @bg-col-light;
     text-color: @grey;
-    vertical-align: 0.5; 
+    border-radius: 4px;
+    vertical-align: 0.5;
     horizontal-align: 0.5;
 }
 
 button selected {
-  background-color: @bg-col;
-  text-color: @blue;
+    background-color: @selected-col;
+    text-color: @fg-col;
 }
