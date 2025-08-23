@@ -16,6 +16,10 @@
     "custom/power"
   ],
 
+  "custom/info": {
+    "format": "  "
+  },
+
   "hyprland/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
@@ -31,7 +35,7 @@
 
   "custom/power": {
     "format": "<span color='#FF4040'>    </span>",
-    "on-click": "wlogout -b 5 -r 1",
+    "on-click": "wlogout",
     "tooltip": true
   },
 
