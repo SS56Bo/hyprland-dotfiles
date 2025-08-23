@@ -16,11 +16,6 @@
     "custom/power"
   ],
 
-  "custom/info": {
-    "format": "     ",
-    "on-click": "sh -c '${TERMINAL:-kitty} sh -c \"fastfetch; echo; read -p \\\"Premi invio per uscire...\\\"\"'"
-  },
-
   "hyprland/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
