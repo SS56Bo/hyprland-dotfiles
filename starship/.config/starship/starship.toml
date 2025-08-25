@@ -1,47 +1,153 @@
+# ~/.config/starship.toml
+
+# Nerd Font + Nord Theme prompt
+
 format = """
-$directory\
-$git_branch\
-$git_status\
-$fill\
-$lua\
-$c\
-$cpp\
-$java\
-$rust\
-$go\
-$python\
-$nodejs\
-line_break\
-$character"""
+[](nord0)\
+$os$username[@](bg:nord0 fg:nord4)$hostname\
+[](bg:nord1 fg:nord0)$directory\
+[](fg:nord1 bg:nord2)$git_branch$git_status\
+[](fg:nord2 bg:nord3)$c$rust$golang$nodejs$php$java$kotlin$haskell$python\
+[ ](fg:nord3)\
+$line_break$character
+"""
 
-[fill]
-symbol = ' '
+palette = "nord"
 
-[lua]
-style='bold blue'
-symbol = ''
-format = 'via [$symbol ($version )]($style)'
+[palettes.nord]
+nord0 = "#2E3440"
+nord1 = "#3B4252"
+nord2 = "#434C5E"
+nord3 = "#4C566A"
+nord4 = "#D8DEE9"
+nord5 = "#E5E9F0"
+nord6 = "#ECEFF4"
+nord7 = "#8FBCBB"
+nord8 = "#88C0D0"
+nord9 = "#81A1C1"
+nord10 = "#5E81AC"
+nord11 = "#BF616A"
+nord12 = "#D08770"
+nord13 = "#EBCB8B"
+nord14 = "#A2BE8A"
+nord15 = "#B48EAD"
 
-[cpp]
-style='sky blue'
-symbol = ''
-format = 'via [$symbol ($version )]($style)'
+[os]
+style = "bg:nord0 fg:nord10"
+disabled = false
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = ""
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:nord0 fg:nord4"
+style_root = "bg:nord0 fg:nord4"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+ssh_symbol = " "
+trim_at = "."
+style = "bg:nord0 fg:nord4"
+format = "[$hostname$ssh_symbol ]($style)"
+
+[directory]
+style = "bg:nord1 fg:nord4"
+format = "[ $path ]($style)"
+read_only = " 󰌾 "
+read_only_style = "bg:nord1 fg:nord11"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:nord2 fg:nord4"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:nord2 fg:nord4"
+format = "[$all_status$ahead_behind ]($style)"
+
+[nodejs]
+symbol = ""
+style = "bg:nord3 fg:nord4"
+format = "[ $symbol ($version) ]($style)"
 
 [c]
-style='light teal'
-symbol = ''
-format = 'via [$symbol ($version )]($style)'
+symbol = " "
+style = "bg:nord3 fg:nord4"
+format = "[ $symbol ($version) ]($style)"
 
 [rust]
-symbol = "󱘗"
-style = "bold red"
-format = 'via [$symbol ($version)]($style)'
+symbol = ""
+style = "bg:nord3 fg:nord4"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = " "
+style = "bg:nord3 fg:nord4"
+format = "[ $symbol ($version) ]($style)"
+
+[php]
+symbol = ""
+style = "bg:nord3 fg:nord4"
+format = "[ $symbol ($version) ]($style)"
 
 [java]
 symbol = " "
-format = "via [${symbol} ${version}](red)"
+style = "bg:nord3 fg:nord4"
+format = "[ $symbol ($version) ]($style)"
+
+[kotlin]
+symbol = ""
+style = "bg:nord3 fg:nord4"
+format = "[ $symbol ($version) ]($style)"
+
+[haskell]
+symbol = ""
+style = "bg:nord3 fg:nord4"
+format = "[ $symbol ($version) ]($style)"
 
 [python]
-symbol = ""
-style = "bold yellow"
-format = 'via [$symbol ($version)]($style)'
+symbol = ""
+style = "bg:nord3 fg:nord4"
+format = "[ $symbol ($version) ]($style)"
+
+[docker_context]
+symbol = ""
+style = "bg:nord4"
+format = "[[ $symbol( $context) ]]($style)"
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = "[](bold fg:nord14)"
+error_symbol = "[](bold fg:nord11)"
