@@ -17,7 +17,7 @@
   ],
 
   "custom/info": {
-    "format": "  "
+    "format": "    "
   },
 
   "hyprland/workspaces": {
@@ -91,13 +91,13 @@
   },
 
   "memory": {
-    "format": "<span color='#dcdfe1'>   </span>{used:0.1f}G/{total:0.1f}G ",
+    "format": "<span color='#dcdfe1'>  </span> {used:0.1f}G/{total:0.1f}G ",
     "tooltip": true,
-    "tooltip-format": "Utilizzo RAM: {used:0.2f}G/{total:0.2f}G"
+    "tooltip-format": "RAM: {used:0.2f}G/{total:0.2f}G"
   },
 
   "cpu": {
-    "format": "<span color='#dcdfe1'>   </span>{usage}% ",
+    "format": "<span color='#dcdfe1'>    </span>{usage}% ",
     "tooltip": true
   },
 
